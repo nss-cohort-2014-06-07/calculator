@@ -47,5 +47,12 @@ describe('Calc', function(){
       expect(avg).to.be.closeTo(7.75, 0.01);
     });
   });
+
+  describe('.stdev', function(){
+    it('should find the stdev of a list of numbers', function(){
+      var stdev = Calc.stdev([4,7,9,11,8,2,6]);
+      expect(stdev).to.be.closeTo(2.81, 0.01);
+    });
+  });
 });
 

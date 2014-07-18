@@ -48,5 +48,15 @@ Calc.mean = function(numbers){
   return sum/numbers.length;
 };
 
+Calc.stdev = function(numbers){
+  var stdev = 0, avg = Calc.mean(numbers);
+
+  for(var i = 0; i < numbers.length; i++){
+    stdev += Math.pow((numbers[i] - avg), 2);
+  }
+
+  return Math.sqrt(stdev/numbers.length);
+};
+
 module.exports = Calc;
 
